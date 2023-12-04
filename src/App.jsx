@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
-import { Navbar } from './components'
+import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
 
 import './App.css'
 
@@ -23,11 +24,11 @@ const App = () => {
           </div>
           {activeMenu ? (
             <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
-              Sidebar
+              <Sidebar />
             </div>
           ) : (
             <div className='w-0 dark:bg-secondary-dark-bg'>
-              Sidebar
+              <Sidebar />
             </div>
           )}
           <div className={
@@ -41,7 +42,7 @@ const App = () => {
           <div>
             <Routes>
               {/* dashboard  */}
-              <Route path="/" element={(<Ecommerce />)} />
+              <Route path="/" element={<Ecommerce />} />
               <Route path="/ecommerce" element={(<Ecommerce />)} />
 
               {/* pages  */}

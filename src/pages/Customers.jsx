@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Customers = () => {
+const Customers= () => {
   return (
-    <div>Customers</div>
+    <div>Customer</div>
   )
 }
 
